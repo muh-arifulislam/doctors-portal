@@ -1,7 +1,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-banner': "url('/src/images/bg.png')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      }
+    },
+
   },
   daisyui: {
     themes: [
@@ -15,7 +21,6 @@ module.exports = {
         },
       },
     ],
-
   },
   plugins: [require("daisyui")],
 }
