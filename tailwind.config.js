@@ -4,6 +4,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-banner': "url('/src/images/bg.png')",
+        'form-background': "url('/src/images/appointment.png')",
+        'footer-background': "url('/src/images/footer.png')",
         'footer-texture': "url('/img/footer-texture.png')",
       }
     },
@@ -16,7 +18,7 @@ module.exports = {
           primary: "rgba(15, 207, 236, 1)",
           secondary: "rgba(25, 211, 174, 1)",
           accent: "rgba(58, 66, 86, 1)",
-          neutral: "#3d4451",
+          neutral: "#939393",
           "base-100": "#ffffff",
         },
       },

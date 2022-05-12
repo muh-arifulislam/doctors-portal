@@ -6,6 +6,7 @@ import Services from '../Services/Services';
 import BottomBanner from '../BottomBanner/BottomBanner';
 import AppointmentBanner from '../AppointmentBanner/AppointmentBanner';
 import Testimonials from '../Testimonials/Testimonials';
+import Form from '../Form';
 const Home = () => {
     return (
         <>
@@ -15,6 +16,7 @@ const Home = () => {
             <BottomBanner></BottomBanner>
             <AppointmentBanner></AppointmentBanner>
             <Testimonials></Testimonials>
+            <Form></Form>
         </>
     );
 };
