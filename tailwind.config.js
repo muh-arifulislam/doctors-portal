@@ -6,6 +6,7 @@ module.exports = {
         'hero-banner': "url('/src/images/bg.png')",
         'form-background': "url('/src/images/appointment.png')",
         'footer-background': "url('/src/images/footer.png')",
+        'chair-background': "url('/src/images/bg-chair.png')",
         'footer-texture': "url('/img/footer-texture.png')",
       }
     },
