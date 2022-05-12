@@ -28,7 +28,7 @@ const Services = () => {
         <section className='lg:mt-32 mt-20'>
             <p className='text-sm text-center'>OUR SERVICE</p>
             <h2 className='text-4xl text-center lg:mb-16 mb-12'>Services We Provide</h2>
-            <div className='grid justify-items-center lg:grid-cols-3 grid-cols-1 gap-9'>
+            <div className='grid justify-items-center lg:grid-cols-3 grid-cols-1 gap-9 mx-[26px]'>
                 {
                     services.map(service => <Service key={service.id} service={service}></Service>)
                 }

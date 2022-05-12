@@ -5,6 +5,7 @@ import InfoCards from '../InfoCards/InfoCards';
 import Services from '../Services/Services';
 import BottomBanner from '../BottomBanner/BottomBanner';
 import AppointmentBanner from '../AppointmentBanner/AppointmentBanner';
+import Testimonials from '../Testimonials/Testimonials';
 const Home = () => {
     return (
         <>
@@ -13,6 +14,7 @@ const Home = () => {
             <Services></Services>
             <BottomBanner></BottomBanner>
             <AppointmentBanner></AppointmentBanner>
+            <Testimonials></Testimonials>
         </>
     );
 };
