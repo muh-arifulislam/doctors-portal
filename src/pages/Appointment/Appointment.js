@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import Calender from './Calender';
 import image from '../../images/chair.png';
 import AppointmentCards from './AppointmentCards';
@@ -15,7 +15,22 @@ const Appointment = () => {
                     </div>
                 </div>
             </section>
-            <AppointmentCards></AppointmentCards>
+            <AppointmentCards><label for="my-modal-6" class="btn btn-primary text-white modal-button">Book Appointment</label></AppointmentCards>
+            {/* Modal  */}
+            <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+            <div class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 class="font-bold text-lg">Cavity Protection</h3>
+                    <input type="text" placeholder="Type here" class="input w-full max-w-lg bg-gray-200 mt-[47px]" />
+                    <input type="text" placeholder="Type here" class="input w-full max-w-lg bg-gray-200 mt-[12px]" />
+                    <input type="text" placeholder="Full Name" class="input input-bordered w-full max-w-lg mt-[23px]" required />
+                    <input type="number" placeholder="Phone Number" class="input input-bordered w-full max-w-lg mt-[23px]" required />
+                    <input type="email" placeholder="Email" class="input input-bordered w-full max-w-lg mt-[23px]" required />
+                    <div class="modal-action flex flex-col">
+                        <label for="my-modal-6" class="btn">SUBMIT</label>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };
