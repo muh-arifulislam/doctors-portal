@@ -1,7 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, useLocation } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const location = useLocation();
     return (
         <nav className="navbar bg-base-100 lg:px-20 py-5">
             <div className="flex-1">
@@ -14,7 +18,17 @@ const Header = () => {
                     <li><Link to='/appointment'>Appointment</Link></li>
                     <li><Link to='/reviews'>Reviews</Link></li>
                     <li><Link to='/contact-us'>Contact us</Link></li>
-                    <li><Link to='/login'>Login</Link></li>
+                    {
+                        user ? <li><button onClick={() => signOut(auth)} className='btn'>Log Out</button></li>
+                            : <>
+                                {
+                                    location.pathname === '/login' ?
+                                        <li><Link className='bg-accent text-white hover:bg-slate-500' to='/signUp'>Sign Up</Link></li> :
+                                        <li><Link to='/login' className='bg-accent text-white hover:bg-slate-500'>Login</Link></li>
+
+                                }
+                            </>
+                    }
                 </ul>
             </div>
             <div className="flex-none">

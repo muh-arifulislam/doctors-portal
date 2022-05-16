@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import Calendar from 'react-calendar';
+import { format } from 'date-fns';
+import { DayPicker } from 'react-day-picker';
 import './Calender.css';
-const Calender = () => {
-    const [value, onChange] = useState(new Date());
+const Calender = ({ date, setDate }) => {
     return (
-        <div>
-            <Calendar onChange={onChange} value={value} />
-        </div>
+        <DayPicker
+            mode="single"
+            required
+            selected={date}
+            onSelect={setDate}
+        />
     );
+
 };
 
 export default Calender;
