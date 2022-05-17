@@ -2,6 +2,7 @@ import React, { createContext, useState } from 'react';
 import Calender from './Calender';
 import image from '../../images/chair.png';
 import AppointmentCards from './AppointmentCards';
+import { format } from 'date-fns';
 const Appointment = () => {
     const [date, setDate] = useState(new Date());
     return (

@@ -11,6 +11,9 @@ import NotFound from './pages/NotFound/NotFound';
 import Reviews from './pages/Reviews/Reviews';
 import { Route, Routes } from 'react-router-dom';
 import RequireAuth from './pages/RequireAuth/RequireAuth';
+import DashBoard from './pages/Appointment/DashBoard/DashBoard';
+import MyAppointment from './pages/Appointment/DashBoard/MyAppointment';
+import MyReview from './pages/Appointment/DashBoard/MyReview';
 function App() {
   return (
     <>
@@ -27,6 +30,14 @@ function App() {
         <Route path='/contact-us' element={<ContactUs></ContactUs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <DashBoard></DashBoard>
+          </RequireAuth>
+        }>
+          <Route index element={<MyAppointment></MyAppointment>}></Route>
+          <Route path='review' element={<MyReview></MyReview>}></Route>
+        </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
